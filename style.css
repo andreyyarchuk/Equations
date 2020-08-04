@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(0,153, 204);
+}
+
+div {
+    text-align: center;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    font-size: 150px;
+    font-family: 'Roboto', sans-serif;
+}
