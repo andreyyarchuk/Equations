@@ -1,8 +1,10 @@
 // объявление переменных
-let firstValue;
-let secondValue;
+let firstValue = 5;
+let secondValue = 3;
 let valueForSing;
 let a = 2;
+let resalt = 0;
+let sing = 0;
 
 // Функции
 
@@ -17,22 +19,15 @@ function sub(firstNumber, secondNumber) {
 function sing(a) {
     return Math.floor(Math.random() * Math.floor(a));
 }
+
 // Алгоритм
 
-firstNumber = Math.floor( Math.random() * 10 );
+let value = sing(a);
 
-secondNumber = Math.floor( Math.random() * 10 );
+if (value == 0) {
+    resalt = sub(firstValue, secondValue);
+} else {
+    resalt = sum(firstValue, secondValue);
+}
 
-let numberForSign = Math.floor(Math.random() * Math.floor(2));
-
-if (numberForSign == 0) {
-        sign = "-";
-    } else {
-        sign = "+";
-    }
-
-do {
-    play = confirm("Will play?");
-    alert("How much will: " + ` ${firstNumber}` +  ` ${sign} `  + `${secondNumber}` + " =");
-} while (play == true); fa
-
+alert(resalt);
