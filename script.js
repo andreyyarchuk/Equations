@@ -1,33 +1,36 @@
 // объявление переменных
 let firstValue = 5;
-let secondValue = 3;
+let secondValue = 4;
 let valueForSing;
 let a = 2;
-let resalt = 0;
-let sing = 0;
+let resalt;
+let sing;
 
 // Функции
 
-function sum(firstNumber, secondNumber) {
+function funcSum(firstNumber, secondNumber) {
     return firstNumber + secondNumber;
 }
 
-function sub(firstNumber, secondNumber) {
+function funcSub(firstNumber, secondNumber) {
     return firstNumber - secondNumber;
 }
 
-function sing(a) {
-    return Math.floor(Math.random() * Math.floor(a));
+function funcSing(a) {
+    return sing = Math.floor(Math.random() * Math.floor(a));
 }
 
 // Алгоритм
 
-let value = sing(a);
+
+let value = funcSing(a);
 
 if (value == 0) {
-    resalt = sub(firstValue, secondValue);
+    resalt = funcSub(firstValue, secondValue);
 } else {
-    resalt = sum(firstValue, secondValue);
+    resalt = funcSum(firstValue, secondValue);
 }
 
-alert(resalt);
+console.log(resalt);
+
+console.log(sing);
