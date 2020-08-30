@@ -5,8 +5,8 @@ let valueForSing;
 let a = 2;
 let resalt;
 let sing;
-let max = 10;
-let min = 10;
+let max;
+let min;
 let strOfsing;
 let i = 0;
 
@@ -36,6 +36,9 @@ function createSecondtValue(min) {
 if (confirm("Will play?")) {
     alert("ok");
 
+    max = prompt("max");
+    min = prompt("min");
+
     do {
     
     createFirstValue(max);
@@ -57,7 +60,6 @@ if (confirm("Will play?")) {
     console.log("sing " + strOfsing);
     console.log("resalt " + resalt);
     i++;
-    alert("ok1");
     } while (i < 4);
 
 }
