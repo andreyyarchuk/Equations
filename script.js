@@ -7,7 +7,8 @@ let resalt;
 let sing;
 let max = 10;
 let min = 10;
-let strOfsing
+let strOfsing;
+let i = 0;
 
 // Функции
 
@@ -32,21 +33,31 @@ function createSecondtValue(min) {
 }
 
 // Алгоритм
-createFirstValue(max);
-createSecondtValue(min);
+if (confirm("Will play?")) {
+    alert("ok");
 
-let value = funcSing(a);
+    do {
+    
+    createFirstValue(max);
+    createSecondtValue(min);
 
-if (value == 0) {
-    resalt = funcSub(firstValue, secondValue);
-    strOfsing = "-";
-} else {
-    resalt = funcSum(firstValue, secondValue);
-    strOfsing = "+";
+    let value = funcSing(a);
+
+    if (value == 0) {
+        resalt = funcSub(firstValue, secondValue);
+        strOfsing = "-";
+    } else {
+        resalt = funcSum(firstValue, secondValue);
+        strOfsing = "+";
+    }
+
+
+    console.log("firstValue " + firstValue);
+    console.log("secondValue " + secondValue);
+    console.log("sing " + strOfsing);
+    console.log("resalt " + resalt);
+    i++;
+    alert("ok1");
+    } while (i < 4);
+
 }
-
-
-console.log("firstValue " + firstValue);
-console.log("secondValue " + secondValue);
-console.log("sing " + strOfsing);
-console.log("resalt " + resalt);
