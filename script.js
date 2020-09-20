@@ -9,6 +9,10 @@ let max;
 let min;
 let strOfsing;
 let i = 0;
+let valueOfEx;
+let answer;
+let corect = 0;
+let uncorect = 0;
 
 // Функции
 
@@ -36,30 +40,40 @@ function createSecondtValue(min) {
 if (confirm("Will play?")) {
     alert("ok");
 
-    max = prompt("max");
-    min = prompt("min");
+    valueOfEx = prompt("How much equations do want to do?", 1);
+
+    max = prompt("max", 5);
+    min = prompt("min", 5);
 
     do {
-    
-    createFirstValue(max);
-    createSecondtValue(min);
 
-    let value = funcSing(a);
+        createFirstValue(max);
+        createSecondtValue(min);
 
-    if (value == 0) {
-        resalt = funcSub(firstValue, secondValue);
-        strOfsing = "-";
-    } else {
-        resalt = funcSum(firstValue, secondValue);
-        strOfsing = "+";
-    }
+        let value = funcSing(a);
+
+        if (value == 0) {
+            resalt = funcSub(firstValue, secondValue);
+            strOfsing = "-";
+        } else {
+            resalt = funcSum(firstValue, secondValue);
+            strOfsing = "+";
+        }
 
 
-    console.log("firstValue " + firstValue);
-    console.log("secondValue " + secondValue);
-    console.log("sing " + strOfsing);
-    console.log("resalt " + resalt);
-    i++;
-    } while (i < 4);
+        /* console.log("firstValue " + firstValue);
+        console.log("secondValue " + secondValue);
+        console.log("sing " + strOfsing);
+        console.log("resalt " + resalt); */
 
+        answer = prompt( firstValue + strOfsing + secondValue  + " =");
+        if (answer == resalt) {
+            corect = corect + 1;
+        } else {
+            uncorect = uncorect + 1;
+        }
+        // console.log( resalt );
+        i++;
+    } while (i < valueOfEx);
+    alert("corect equations; " + corect + "; " + "uncorect equations: " + uncorect + ";");
 }
